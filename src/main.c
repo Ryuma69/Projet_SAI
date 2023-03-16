@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "GL/gl.h"
 #include "GL/glut.h"
+#include "../include/affichage.h"
+#include "../include/perso.h"
 
 int main(int argc, char **argv)
 {
