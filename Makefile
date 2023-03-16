@@ -6,17 +6,21 @@ OBJ = $(patsubst %.c, %.o, $(SRC))
 
 
 
-all: main clean_object
+all: main cleano
 
 main: $(OBJ)
-	$(CC) $(OBJ) -o $@ $(OPT)
+	@echo "Création de l'executable"
+	@$(CC) $(OBJ) -o $@ $(OPT)
 
 
 %.o: src/%.c
-	$(CC) -o $@ -c $< 
+	@echo "Création de $@"
+	@$(CC) -o $@ -c $< 
 
 
-clean_object:
-	rm *.o
+cleano:
+	@echo "Suppresion des fichiers objets..."
+	@rm *.o
 clean:
-	rm main
+	@echo "Suppression de l'executable"
+	@rm main
