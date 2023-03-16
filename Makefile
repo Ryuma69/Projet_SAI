@@ -1,6 +1,6 @@
 CC=gcc
 OPT= -lglut -lGLU -lGL -lm
-SRC = main.c
+SRC = main.c affichage.c
 OBJ = $(patsubst %.c, %.o, $(SRC))
 
 
